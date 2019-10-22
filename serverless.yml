@@ -1,4 +1,4 @@
-service: contact-form-api
+service: serverless-nodejs-sample
 
 custom:
   secrets: ${file(secrets.json)}
@@ -20,9 +20,23 @@ provider:
 
 functions:
   send:
-    handler: handler.send
+    handler: email.send
     events:
       - http:
           path: email/send
-          method: post
+          method: get
+          cors: true
+  weather:
+    handler: weather.getWeather
+    events:
+      - http:
+          path: weather
+          method: get
+          cors: true
+  catfact:
+    handler: catfact.getCatFact
+    events:
+      - http:
+          path: catfact
+          method: get
           cors: true
