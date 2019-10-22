@@ -1,0 +1,24 @@
+{
+  "name": "serverless-nodejs-sample",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "catfact": "serverless invoke local -f catfact",
+    "weather": "serverless invoke local -f weather --data '{ \"queryStringParameters\": {\"city\":\"London\"}}'",
+    "send": "serverless invoke local -f send --data '{ \"queryStringParameters\": {\"city\":\"London\", \"name\":\"Max Muster\", \"email\": \"max.muster@gmail.com\"}}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christoph-findling/serverless-nodejs-sample.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christoph-findling/serverless-nodejs-sample/issues"
+  },
+  "homepage": "https://github.com/christoph-findling/serverless-nodejs-sample#readme",
+  "dependencies": {
+    "aws-sdk": "^2.553.0",
+    "node-fetch": "^2.6.0"
+  }
+}
