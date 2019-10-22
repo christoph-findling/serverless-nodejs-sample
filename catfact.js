@@ -10,10 +10,10 @@ module.exports.getCatFact = async event =>{
     try {
         const fact = await this.fetchCatFact();
         console.log('got cat fact', fact);
-        util.generateResponse(200, fact);
+        return util.generateResponse(200, fact);
     } catch(error) {
         console.error(error);
-        util.generateResponse(500, error);
+        return util.generateResponse(500, error);
     }
 }
 
@@ -26,6 +26,6 @@ module.exports.fetchCatFact = async () => {
         return await response.json();
     } catch(error) {
         console.error(error);
-        util.generateResponse(500, error);
+        return util.generateResponse(500, error);
     }
 }

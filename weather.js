@@ -16,10 +16,10 @@ module.exports.getWeather = async event =>{
         }
         const weather = await this.fetchWeather(city);
         console.log(`got weather for ${city}`, weather)
-        util.generateResponse(200, weather);
+        return util.generateResponse(200, weather);
     } catch(error) {
         console.error(error);
-        util.generateResponse(500, error);
+        return util.generateResponse(500, error);
     }
 }
 
@@ -32,6 +32,6 @@ module.exports.fetchWeather = async(city) => {
         return await response.json();
     } catch(error) {
         console.error(error);
-        util.generateResponse(500, error);
+        return util.generateResponse(500, error);
     }
 }
