@@ -5,7 +5,7 @@
   "scripts": {
     "catfact": "serverless invoke local -f catfact",
     "weather": "serverless invoke local -f weather --data '{ \"queryStringParameters\": {\"city\":\"London\"}}'",
-    "send": "serverless invoke local -f send --data '{ \"queryStringParameters\": {\"city\":\"London\", \"name\":\"Max Muster\", \"email\": \"max.muster@gmail.com\"}}'"
+    "send": "serverless invoke local -f send --data '{ \"queryStringParameters\": {\"name\":\"Max Muster\", \"email\": \"max.muster@gmail.com\"}}'"
   },
   "repository": {
     "type": "git",

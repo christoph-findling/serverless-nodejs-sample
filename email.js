@@ -37,7 +37,8 @@ module.exports.send = async event => {
     try {
         const emailParams = generateEmailParams(event.queryStringParameters, catfact.fetchCatFact());
         const data = await ses.sendEmail(emailParams).promise();
-        return util.generateResponse(200, data);
+        console.log('sent email', data);
+        return util.generateResponse(200, `Email has been sent. Check the supplied email adress from the secrets.json.`);
     } catch (err) {
         console.error(err);
         return util.generateResponse(500, err.message);
