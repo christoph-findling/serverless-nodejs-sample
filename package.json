@@ -19,6 +19,6 @@
   "homepage": "https://github.com/christoph-findling/serverless-nodejs-sample#readme",
   "dependencies": {
     "aws-sdk": "^2.553.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
